@@ -8,12 +8,12 @@ use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
-    foreach(range(1, 10) as $i) {
-        SendWelcomeEMail::dispatch();
+    // foreach(range(1, 10) as $i) {
+    //     SendWelcomeEMail::dispatch();
         
-    }
+    // }
 
-    ProcessPayments::dispatch()->onQueue('payments');
+    // ProcessPayments::dispatch()->onQueue('payments');
 
     // WHEN YOU DISPATCH A JOB, YOU CAN SPECIFY THE QUEUE TO WHICH IT SHOULD BE DISPATCHED
     // PHP artisan queue:work --queue=payments,default;
