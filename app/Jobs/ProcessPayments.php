@@ -5,7 +5,7 @@ namespace App\Jobs;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 
-class SendWelcomeEMail implements ShouldQueue
+class ProcessPayments implements ShouldQueue
 {
     use Queueable;
 
@@ -23,8 +23,5 @@ class SendWelcomeEMail implements ShouldQueue
     public function handle(): void
     {
         //
-        sleep(3);
-        info('Welcome email sent');
-
     }
 }
